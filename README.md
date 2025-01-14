@@ -34,6 +34,37 @@ using (var context = new MyDbContext())
 }
 ```
 
+## Language Options
+Here are the default Full Text Search language configurations available in PostgreSQL:
+simple: Simple configuration, language-independent, and does not use stopwords.
+arabic: Arabic
+armenian: Armenian
+catalan: Catalan
+danish: Danish
+dutch: Dutch
+english: English
+finnish: Finnish
+french: French
+german: German
+greek: Greek
+hindi: Hindi
+hungarian: Hungarian
+indonesian: Indonesian
+irish: Irish
+italian: Italian
+lithuanian: Lithuanian
+nepali: Nepali
+norwegian: Norwegian
+portuguese: Portuguese
+romanian: Romanian
+russian: Russian
+serbian: Serbian
+spanish: Spanish
+swedish: Swedish
+tamil: Tamil
+turkish: Turkish
+yiddish: Yiddish
+
 ## Step-3
 Adds a GIN index for the search_vector column to the table. This improves search performance.
 ```csharp
