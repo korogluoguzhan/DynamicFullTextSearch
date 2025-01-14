@@ -7,7 +7,7 @@
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\DynamicFullTextSearchService.xml</DocumentationFile>
     <Authors>Oğuzhan Köroğlu</Authors>
     <Description>A library that provides dynamic Full Text Search and Regex support for PostgreSQL.</Description>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <PackageId>DynamicFullTextSearchService</PackageId>
     <RepositoryUrl>https://github.com/korogluoguzhan/DynamicFullTextSearch</RepositoryUrl>
     <PackageTags>PostgreSQL FullTextSearch Regex EntityFramework Search</PackageTags>
@@ -17,6 +17,7 @@
     <RepositoryType>git</RepositoryType>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
