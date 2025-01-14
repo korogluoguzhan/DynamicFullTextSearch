@@ -15,6 +15,7 @@ Create the necessary property for the table you will use.
 public NpgsqlTsVector? search_vector { get; set; }
 ```
 
+## You only need to use Step-2 and Step-3 once.
 
 ## Step-2
 The trigger automatically populates the search_vector column when adding or updating data to a table.
@@ -43,7 +44,6 @@ using (var context = new MyDbContext())
     await searchService.CreateSearchVectorIndexAsync("YourTable");
 }
 ```
-## You only need to use Step-2 and Step-3 once.
 ## Step-4
 After running Step-2 and Step-3 once, you are ready to use the Search method.
 ```csharp
