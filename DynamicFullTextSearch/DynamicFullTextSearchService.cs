@@ -61,7 +61,9 @@ namespace DynamicFullTextSearch
 
             var whereClause = string.Join(" OR ", whereConditions);
 
-            var sqlQuery = $"SELECT * FROM \"{typeof(TEntity).Name}\" WHERE {whereClause}";
+            var tableName = _context.Model.FindEntityType(typeof(TEntity)).GetTableName();
+
+            var sqlQuery = $"SELECT * FROM \"{tableName}\" WHERE {whereClause}";
 
             var query = _context.Set<TEntity>().FromSqlRaw(sqlQuery,
             new NpgsqlParameter("@0", NpgsqlTypes.NpgsqlDbType.Text) { Value = dynamicQuery },
@@ -188,7 +190,7 @@ namespace DynamicFullTextSearch
             try
             {
                 string indexSql = $@"
-                CREATE INDEX IF NOT EXISTS idx_search_vector ON ""{tableName}"" USING GIN (searchvector);";
+                CREATE INDEX IF NOT EXISTS idx_search_vector ON ""{tableName}"" USING GIN (search_vector);";
 
                 await _context.Database.ExecuteSqlRawAsync(indexSql);
             }
